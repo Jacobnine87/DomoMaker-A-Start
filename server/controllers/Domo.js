@@ -43,13 +43,16 @@ const makeDomo = (req, res) => {
   return domoPromise;
 };
 
-const deleteDomo = (req, res) => Domo.DomoModel.deleteByOwnerName(req.session.account._id, req.body.name, (err, docs) => {
-  if(err) {
-    return res.status(400).json({ error: 'An error occurred' });
-  } else {
+const deleteDomo = (req, res) => Domo.DomoModel.deleteByOwnerName(
+  req.session.account._id,
+  req.body.name,
+  (err) => {
+    if (err) {
+      return res.status(400).json({ error: 'An error occurred' });
+    }
     return res.status(204).send();
-  }
-});
+  },
+);
 
 const getDomos = (req, res) => Domo.DomoModel.findByOwner(req.session.account._id, (err, docs) => {
   if (err) {
