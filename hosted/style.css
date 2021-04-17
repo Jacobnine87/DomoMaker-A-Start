@@ -50,7 +50,8 @@ nav:nth-child(1) {
 .domoForm {
     border: 2px solid #338acc;
     height: 35px;
-    width: 700px;
+    min-width: 700px;
+    width: 60%;
     margin-top:0px;
     padding-top:10px;
     background-color: #55acee;
@@ -60,7 +61,7 @@ nav:nth-child(1) {
 
 .domoForm label {
     display: inline-block;
-    width: 75px;
+    padding-right: 20px;
     margin-left: 10px;
     font-size: 1.2em;
     float: left;
@@ -220,7 +221,6 @@ nav:nth-child(1) {
 
 img.domoFace {
     margin-left: 25px;
-    margin-right: 10px;
     height: 50px;
     width: 50px;
     border-radius: 4px;
@@ -253,6 +253,12 @@ h3.domoAge {
     font-size: 1.5em;
 }
 
+h3.domoFruit {
+    float: right;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+
 .domo:first-child {
     margin-top: 10px;
 }
@@ -260,3 +266,20 @@ h3.domoAge {
 .domo:last-child {
     margin-bottom:10px;
 }
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: glyphicons-halflings;
+    src: local('glyphicons-halflings'), url(./../fonts/glyphicons-halflings-regular.woff) format('woff');
+;
